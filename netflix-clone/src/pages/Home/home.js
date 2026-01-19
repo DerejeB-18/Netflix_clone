@@ -1,14 +1,22 @@
 import React from 'react';
 import Banner from '../../Components/Banner/Banner';
-import "./home.css"; 
+import Row from '../../Components/Rows/Row/Row';
+import requests from '../../utils/requests';
 
 const Home = () => {
-  return (
-      <>
-        <Banner />
-       {/* Future Movie Rows will go here, e.g., <Row title="Trending Now" ... /> */}
-    </>
-  )
+    return (
+        <>
+            <Banner />
+            <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
+            <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+            <Row title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
+            <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+            <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+            <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+            <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+            <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+        </>
+    )
 }
 
 export default Home;

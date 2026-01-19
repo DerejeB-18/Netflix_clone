@@ -1,0 +1,44 @@
+.row {
+    color: white;
+    margin-left: 20px;
+}
+
+.row_posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+/* Professional touch: Hide scrollbar for Chrome, Safari and Opera */
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.row_posters {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.row_poster {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px; /* Standard height for backdrop rows */
+    margin-right: 10px;
+    transition: transform 450ms;
+    cursor: pointer;
+}
+
+.row_poster:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.row_posterLarge {
+    max-height: 250px; /* Taller height for "Netflix Originals" row */
+}
+
+.row_posterLarge:hover {
+    transform: scale(1.09);
+}
