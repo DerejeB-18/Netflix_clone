@@ -1,16 +1,13 @@
 import React from 'react';
+import Banner from '../../Components/Banner/Banner';
 import "./home.css"; 
 
 const Home = () => {
   return (
-    <div className="home">
-        {/* {/* DO NOT PUT <Header /> or <Footer /> HERE. 
-            They are already coming from App.js 
-        */}
-        <div style={{height: "500px", color: "white", padding: "100px"}}>
-            {/* <h1>Main Home Content (Banner/Rows) will go here</h1> */}
-        </div>
-    </div>
+      <>
+        <Banner />
+       {/* Future Movie Rows will go here, e.g., <Row title="Trending Now" ... /> */}
+    </>
   )
 }
 
